@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinhala to Braille Converter</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold text-center mb-8">Sinhala to Braille and Braille to Sinhala Converter</h1>
+        
+        <!-- Sinhala to Braille Section -->
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Sinhala to Braille</h2>
+            <textarea id="sinhalaInput" 
+                      class="w-full p-4 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Enter Sinhala text"></textarea>
+            <button id="convertButton" 
+                    class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                Convert to Braille
+            </button>
+            <p class="mt-4"><strong>Braille Output:</strong> <span id="brailleOutput" class="block mt-2 text-lg text-gray-700"></span></p>
+        </div>
+
+        <!-- Braille to Sinhala Section -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-2xl font-semibold mb-4">Braille to Sinhala</h2>
+            <textarea id="brailleInput" 
+                      class="w-full p-4 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+                      placeholder="Enter Braille text"></textarea>
+            <button id="reverseConvertButton" 
+                    class="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300">
+                Convert to Sinhala
+            </button>
+            <p class="mt-4"><strong>Sinhala Output:</strong> <span id="sinhalaOutput" class="block mt-2 text-lg text-gray-700"></span></p>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
